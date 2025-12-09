@@ -16,7 +16,7 @@ resources:
 
         - task_key: data_ingestion
           notebook_task:
-            notebook_path: ../notebooks/01_ingest_kaggle.ipynb
+            notebook_path: ../notebooks/01-download-dataset-kaggle.ipynb
             source: WORKSPACE
           environment_key: ${bundle.target}
 
