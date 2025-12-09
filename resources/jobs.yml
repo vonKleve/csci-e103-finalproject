@@ -1,0 +1,34 @@
+resources:
+  jobs:
+    finalProject_pipeline:
+      name: "Final Project Pipeline"
+
+      # Run this job once every 24 hours.
+      trigger:
+        periodic:
+          interval: 24
+          unit: HOURS
+
+      tasks:
+        - task_key: task
+          spark_python_task:
+            python_file: ../src/main.py
+          environment_key: Dev
+
+        - task_key: Data_Ingestion
+          notebook_task:
+            notebook_path: ../notebooks/01_ingest_kaggle.ipynb
+            source: WORKSPACE
+          environment_key: Dev
+
+      queue:
+        enabled: true
+
+      environments:
+        - environment_key: Dev
+          spec:
+            environment_version: "4"
+            dependencies:
+              - cowsay
+
+      performance_target: PERFORMANCE_OPTIMIZED

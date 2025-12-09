@@ -1,0 +1,28 @@
+# --- Core Databricks / Spark ---
+pyspark==3.5.0
+
+# --- ML & Model Training ---
+mlflow
+scikit-learn
+pandas
+numpy
+
+# --- Kaggle Ingestion ---
+kaggle
+python-dotenv
+
+# --- Testing ---
+# pytest
+# pytest-mock
+
+# --- CI/CD: Databricks SDK + Bundles ---
+# databricks-sdk
+# databricks-cli
+
+# --- Utility Libraries ---
+requests
+pyyaml
+
+# --- Code Quality (optional but recommended) ---
+black
+flake8
