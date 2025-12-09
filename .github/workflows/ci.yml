@@ -61,8 +61,8 @@ jobs:
       - name: Set up Databricks CLI
         uses: databricks/setup-cli@main
 
-      - name: Run medallion_pipeline job
-        run: databricks bundle run medallion_pipeline --refresh-all
+      - name: Run finalProject_pipeline job
+        run: databricks bundle run finalProject_pipeline --refresh-all
         working-directory: .
         env:
           DATABRICKS_HOST: "https://dbc-2717eb51-11b4.cloud.databricks.com" # ${{ secrets.DATABRICKS_HOST }}

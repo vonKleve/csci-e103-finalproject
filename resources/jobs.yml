@@ -1,6 +1,6 @@
 resources:
   jobs:
-    serverless_job:
+    finalProject_pipeline:
       name: "Example serverless job"
 
       # Run this job once every 24 hours.
