@@ -1,7 +1,7 @@
 resources:
   jobs:
     finalProject_pipeline:
-      name: "Example serverless job"
+      name: "Final Project Pipeline"
 
       # Run this job once every 24 hours.
       trigger:
@@ -28,5 +28,8 @@ resources:
         - environment_key: Dev
           spec:
             environment_version: "4"
+            client: "1"
+            dependencies:
+              - cowsay
 
       performance_target: PERFORMANCE_OPTIMIZED
