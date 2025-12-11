@@ -15,8 +15,8 @@ targets:
   dev:
     default: true
     workspace:
-      host: https://dbc-2717eb51-11b4.cloud.databricks.com
+      host: https://dbc-f37ae718-1631.cloud.databricks.com
 
   prod:
     workspace:
-      host: https://dbc-2717eb51-11b4.cloud.databricks.com
+      host: https://dbc-f37ae718-1631.cloud.databricks.com
