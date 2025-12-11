@@ -14,13 +14,7 @@ workspace:
 targets:
   dev:
     default: true
-    workspace:
-      # host: ${{ secrets.SAYED_DATABRICKS_HOST }} # sayed
-      host: ${{ secrets.ALEX_DATABRICKS_HOST }} # alex
-      # host: ${{ secrets.DANIEL_DATABRICKS_HOST }} # daniel
+    # host is set via DATABRICKS_HOST environment variable in GitHub Actions
 
   prod:
-    workspace:
-      # host: ${{ secrets.SAYED_DATABRICKS_HOST }} # sayed
-      host: ${{ secrets.ALEX_DATABRICKS_HOST }} # alex
-      # host: ${{ secrets.DANIEL_DATABRICKS_HOST }} # daniel
+    # host is set via DATABRICKS_HOST environment variable in GitHub Actions
