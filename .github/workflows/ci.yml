@@ -46,7 +46,7 @@ jobs:
         working-directory: .
         env:
           DATABRICKS_HOST: "https://dbc-f37ae718-1631.cloud.databricks.com" # ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: "dapi0b90879f3db4fa2b0e57cc68ee849fd6" # # ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_TOKEN: "dapi8b10b146a9d6b5f425dbf651c9090f02" # "dapi0b90879f3db4fa2b0e57cc68ee849fd6" # # ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: dev
   
   dev-run:
@@ -66,5 +66,5 @@ jobs:
         working-directory: .
         env:
           DATABRICKS_HOST: "https://dbc-f37ae718-1631.cloud.databricks.com" # ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: "dapi0b90879f3db4fa2b0e57cc68ee849fd6" # # ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_TOKEN: "dapi8b10b146a9d6b5f425dbf651c9090f02" #"dapi0b90879f3db4fa2b0e57cc68ee849fd6" # # ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: dev
