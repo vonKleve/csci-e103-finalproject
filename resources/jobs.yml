@@ -81,7 +81,7 @@ resources:
           depends_on:
             - task_key: Data_Insights_Gold
           notebook_task:
-            notebook_path: ../notebooks/06-permissions.ipynb
+            notebook_path: ../notebooks/06-permisions.ipynb
             source: WORKSPACE
           environment_key: ${bundle.target}
 
