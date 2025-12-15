@@ -21,7 +21,7 @@ resources:
           environment_key: ${bundle.target}
 
         # 02-exploratory-data-analysis-bronze
-        - task_key: bronze_data
+        - task_key: Data_Ingestion_Bronze
           depends_on:
             - task_key: data_download
           notebook_task:
@@ -30,29 +30,41 @@ resources:
           environment_key: ${bundle.target}
         
         # 03-exploratory-data-analysis-silver
-        - task_key: silver_data
+        - task_key: Data_Cleansing_Silver
           depends_on:
-            - task_key: bronze_data
+            - task_key: Data_Ingestion_Bronze
           notebook_task:
             notebook_path: ../notebooks/03-exploratory-data-analysis-silver.ipynb
             source: WORKSPACE
           environment_key: ${bundle.target}
         
+        # 03-Oil_data_Streaming_Silver
+        # 04-exploratory-data-analysis-gold
+        - task_key: Stream_Oil_Prices
+          depends_on:
+            - task_key: Data_Cleansing_Silver
+          notebook_task:
+            notebook_path: ../notebooks/03-Oil_data_Streaming_Silver.ipynb
+            source: WORKSPACE
+          environment_key: ${bundle.target}
+ 
+        # 05-mlflow-training
+        - task_key: mlflow_training_Serving
+          depends_on:
+            - task_key: Data_Cleansing_Silver
+          notebook_task:
+            notebook_path: ../notebooks/05-mlflow-training.ipynb
+            source: WORKSPACE
+          environment_key: ${bundle.target}
+
         # 04-exploratory-data-analysis-gold
         - task_key: gold_data
           depends_on:
-            - task_key: silver_data
+            - task_key: Data_Cleansing_Silver
+            - task_key: Stream_Oil_Prices
+            - task_key: mlflow_training_Serving
           notebook_task:
             notebook_path: ../notebooks/04-exploratory-data-analysis-gold.ipynb
-            source: WORKSPACE
-          environment_key: ${bundle.target}
-        
-        # 05-mlflow-training
-        - task_key: mlflow_training
-          depends_on:
-            - task_key: silver_data
-          notebook_task:
-            notebook_path: ../notebooks/05-mlflow-training.ipynb
             source: WORKSPACE
           environment_key: ${bundle.target}
 
