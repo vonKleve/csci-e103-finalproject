@@ -49,7 +49,7 @@ jobs:
           # DATABRICKS_HOST: ${{ secrets.SAYED_DATABRICKS_HOST }}
           # DATABRICKS_TOKEN: ${{ secrets.SAYED_DATABRICKS_TOKEN }}
           DATABRICKS_HOST: "https://dbc-2717eb51-11b4.cloud.databricks.com" # ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: "dapi0b90879f3db4fa2b0e57cc68ee849fd6" # ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_TOKEN: "dapi4455c2a30719077bf142f277b7ab73b4" # ${{ secrets.DATABRICKS_TOKEN }}
           # alex
           # DATABRICKS_HOST: ${{ secrets.ALEX_DATABRICKS_HOST }}
           # DATABRICKS_TOKEN: ${{ secrets.ALEX_DATABRICKS_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
           # DATABRICKS_HOST: ${{ secrets.SAYED_DATABRICKS_HOST }}
           # DATABRICKS_TOKEN: ${{ secrets.SAYED_DATABRICKS_TOKEN }}
           DATABRICKS_HOST: "https://dbc-2717eb51-11b4.cloud.databricks.com" # ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: "dapi0b90879f3db4fa2b0e57cc68ee849fd6" # ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_TOKEN: "dapi4455c2a30719077bf142f277b7ab73b4" # ${{ secrets.DATABRICKS_TOKEN }}
           # alex
           # DATABRICKS_HOST: ${{ secrets.ALEX_DATABRICKS_HOST }}
           # DATABRICKS_TOKEN: ${{ secrets.ALEX_DATABRICKS_TOKEN }}
