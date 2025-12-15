@@ -65,6 +65,15 @@ resources:
             source: WORKSPACE
           environment_key: ${bundle.target}
 
+          # 06-permissions
+        - task_key: platinum_data_insights
+          depends_on:
+            - task_key: mlflow_training
+          notebook_task:
+            notebook_path: ../notebooks/06-permissions.ipynb
+            source: WORKSPACE
+          environment_key: ${bundle.target}
+
       queue:
         enabled: true
 
