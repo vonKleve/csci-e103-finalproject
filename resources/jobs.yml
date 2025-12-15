@@ -77,7 +77,7 @@ resources:
           environment_key: ${bundle.target}
 
         # 06-permissions
-        - task_key: Security_Access_Permissions
+        - task_key: Security_Access_Check
           depends_on:
             - task_key: Data_Insights_Gold
           notebook_task:
