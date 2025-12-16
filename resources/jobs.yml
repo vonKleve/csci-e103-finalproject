@@ -70,7 +70,7 @@ resources:
           depends_on:
             - task_key: Data_Cleansing_Silver
             - task_key: Stream_Oil_Prices
-            - task_key: mlflow_training_Serving
+            - task_key: mlflow_Serving
           notebook_task:
             notebook_path: ../notebooks/04-gold-tier-data-insights.ipynb
             source: WORKSPACE
@@ -79,7 +79,7 @@ resources:
         # 05-platinum-tables
         - task_key: platinum_data_insights
           depends_on:
-            - task_key: mlflow_training_Serving
+            - task_key: mlflow_Serving
           notebook_task:
             notebook_path: ../notebooks/05-platinum-tier.ipynb
             source: WORKSPACE
